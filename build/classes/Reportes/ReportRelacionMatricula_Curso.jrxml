@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="195ef8cd-82fe-480a-bf71-326d79c58940">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="Logo1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call mostrarRelacionMatricula_Curso();]]>
+	</queryString>
+	<field name="idmatricula" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="230" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="125" y="115" width="80" height="15" uuid="161c169a-86a3-407b-85ba-4917edd83818"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[DIRECTOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="228" y="85" width="206" height="15" uuid="d66615e3-544e-474c-b205-664e2e6207b6"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Calle César Vallejo 1024 Mz. 30 Lote 12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="84" y="175" width="396" height="33" uuid="eb399612-c670-4dab-999b-e28eb1aec181"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="24"/>
+				</textElement>
+				<text><![CDATA[RELACIÓN MATRICULA - CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="228" y="115" width="206" height="15" uuid="9753c304-1c2b-43f0-a1ef-da36909204ac"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[M.G. Violeta Castillo Ávalos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="228" y="145" width="206" height="15" uuid="e4e98579-182b-46be-988e-5ea9abb66715"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[M.G. Humberto Quezada Sánchez]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="455" y="0" width="101" height="17" uuid="d5f2b49c-0612-48a1-b3fe-26e605996959"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="125" y="35" width="309" height="33" forecolor="#CC0033" uuid="f432a39f-19f2-4dc2-af52-dfd4badf4163"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[I.E.P. "CIRO ALEGRIA"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="125" y="145" width="80" height="15" uuid="f7faaef6-10a2-49f0-a68c-ecd8943e9484"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[SUBDIRECTOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="205" y="208" width="163" height="22" uuid="b767c0a0-ef83-45df-9e13-4f20b75705b4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Datos Relacionados]]></text>
+			</staticText>
+			<image>
+				<reportElement x="31" y="16" width="66" height="70" uuid="9743bbe1-af93-4d91-9ca4-32c0eb44102d"/>
+				<imageExpression><![CDATA[$P{Logo1}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="SubTitle" x="125" y="85" width="80" height="15" uuid="424500d2-9823-4167-bf70-2806630a8c26"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="370accfa-ff87-481c-80d1-85bb3d5987ba"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="20" y="20" width="150" height="15" uuid="f571409a-d3fc-4618-8a9a-75263787d0b6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Id - Matricula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="205" y="20" width="150" height="15" uuid="00b79aa6-4cfc-407e-91d8-71e65e44d8b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha - Matricula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="20" width="150" height="15" uuid="71d652bd-819c-4184-8ab0-ab922d308b79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Curso]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="c4aa0c31-d61f-4721-88b8-22151704c72c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="20" y="1" width="150" height="15" uuid="7bf11133-c768-4bc0-a32a-6bb8e616bbe5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idmatricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="248" y="1" width="61" height="15" uuid="f7fa5c93-5256-404a-81e7-3f225eca2b18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="390" y="1" width="150" height="15" uuid="49ac40a3-d2af-43c2-9298-5f14ca41ef5b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f9012d99-fa10-419c-844e-d543976b305c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="259e7273-dc69-42ff-aa30-cc783cc519e2"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="864ad071-2cfc-45ce-88d2-208fbfe5e354"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
